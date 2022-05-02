@@ -1,5 +1,5 @@
 let age = prompt('Ваш год рождения?')
-if  ( age === null || age.length > 4 || isNaN(+age) || age.trim() === '')   {
+if  ( age === null || age.length > 4 || isNaN(+age) || age.trim() === '' || age > 2022)   {
     alert(`Жаль что вы не ввели свой год рождения`)
     age = `Вы не ввели год рождения`
 } else{
@@ -47,11 +47,14 @@ switch (hobby) {
     case '':
     case ' ':
         alert('Жаль что вы не ввели свой любимый вид спорта')
-        city = 'Вы не ввели свой любимый вид спорта'
+        hobby = 'Вы не ввели свой любимый вид спорта'
         break;
     default:
         alert(`Твой любимый вид спорта: ${hobby}`)
 }
-let userInfo = alert(`Твой возраст:${age} \n
-Твой город:${city} \n
-Твой любимый вид спорта:${hobby}`)
+if (age === `Вы не ввели год рождения` && city === 'Вы не ввели город' && hobby === 'Вы не ввели свой любимый вид спорта' ){
+    let userInfo = alert('Вы не ввели свои данные')
+} else {
+    let userInfo = alert(`Твой возраст:${age} \n Твой город:${city} \n Твой любимый вид спорта:${hobby}`)
+}
+
