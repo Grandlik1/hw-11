@@ -3,7 +3,7 @@ if  ( age === null || age.length > 4 || isNaN(+age) || age.trim() === '' || age 
     alert(`Жаль что вы не ввели свой год рождения`)
     age = `Вы не ввели год рождения`
 } else{
-    alert(`Твой возраст:${2022 - age} `)
+    alert(`Твой возраст:${2022 - age} лет `)
 }
 
 let city = prompt('В каком городе ты живешь?')
